@@ -24,6 +24,12 @@ module.exports = {
                    {loader: 'style-loader'},
                    {loader: 'css-loader'},
                ]
+            },
+            {
+                test: /.*\.(git|png|jpe?g)$/i,
+                use: {
+                    loader: 'file-loader'
+                }
             }
         ]
     }

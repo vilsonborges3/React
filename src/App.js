@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
+import jediOrder from './assets/jediOrder.jpg';
 
 function App() {
-    return <h1>Hello ...</h1>
+    return <img src={jediOrder} />
 }
 
 export default App;
