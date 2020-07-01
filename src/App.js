@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import jediOrder from './assets/jediOrder.jpg';
+
+import TechList from './components/TechList';
 
 function App() {
-    return <img src={jediOrder} />
+    return <TechList />
 }
 
 export default App;
