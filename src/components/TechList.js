@@ -13,16 +13,28 @@ class TechList extends Component{
         this.setState({ newTech: e.target.value });
     }
 
+    handleSubmit = e => {
+        e.preventDefault();
+
+        this.setState({ 
+            techs: [... this.state.techs, this.state.newTech],
+            newTech: ''
+        });
+    }
+
     render(){
-        console.log(this.state);
         return (
-            <>
-                <h1>{this.state.newTech}</h1>
+            <form onSubmit={this.handleSubmit}>
                 <ul>
                     {this.state.techs.map(tech => <li key={tech}>{tech}</li>)}
                 </ul>
-                <input type="text" onChange={this.handleInputChange}/>
-            </>
+                <input 
+                    type="text" 
+                    onChange={this.handleInputChange} 
+                    value={this.state.newTech}
+                />
+                <button type="submit">Enviar</button>
+            </form>
             
         );
     }
